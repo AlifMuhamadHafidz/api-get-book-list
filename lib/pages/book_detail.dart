@@ -14,7 +14,7 @@ class BookDetail extends StatefulWidget {
 class _DetailBukuState extends State<BookDetail> {
   Map<String, dynamic>? responListBook;
   getDataSatuBuku() async {
-    var url = Uri.parse('https://api.itbook.store/1.0/books/9781484206485');
+    var url = Uri.parse('https://api.itbook.store/1.0/books/9781617294136');
     var response = await http.get(
       url,
     );
@@ -28,7 +28,7 @@ class _DetailBukuState extends State<BookDetail> {
 
   Map<String, dynamic>? responListBook2;
   getDataSatuBuku2() async {
-    var url = Uri.parse('https://api.itbook.store/1.0/books/9781617294136');
+    var url = Uri.parse('https://api.itbook.store/1.0/books/9781642002133');
     var response = await http.get(
       url,
     );
@@ -42,7 +42,7 @@ class _DetailBukuState extends State<BookDetail> {
 
   Map<String, dynamic>? responListBook3;
   getDataSatuBuku3() async {
-    var url = Uri.parse('https://api.itbook.store/1.0/books/9781491954249');
+    var url = Uri.parse('https://api.itbook.store/1.0/books/9780137559534');
     var response = await http.get(
       url,
     );
@@ -56,7 +56,7 @@ class _DetailBukuState extends State<BookDetail> {
 
   Map<String, dynamic>? responListBook4;
   getDataSatuBuku4() async {
-    var url = Uri.parse('https://api.itbook.store/1.0/books/9781491999226');
+    var url = Uri.parse('https://api.itbook.store/1.0/books/1001651662833');
     var response = await http.get(
       url,
     );
@@ -121,7 +121,7 @@ class _DetailBukuState extends State<BookDetail> {
     return Scaffold(
       appBar: AppBar(
           title: const Text(
-            "Detail Buku",
+            "Books Detail",
             style: TextStyle(color: Colors.white),
           ),
           backgroundColor: Colors.blueAccent,
@@ -237,7 +237,7 @@ class _DetailBukuState extends State<BookDetail> {
           ),
           child: const Center(
             child: Text(
-              "Rekomendasi Bacaan Bagus",
+              "Recommended",
               style:
                   TextStyle(color: Colors.indigo, fontWeight: FontWeight.bold),
             ),
@@ -264,13 +264,14 @@ class _DetailBukuState extends State<BookDetail> {
                 child: Image.network(responListBook3!["image"]),
               )),
               Expanded(
-                  child: Container(
-                margin: const EdgeInsets.all(5),
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                    color: Colors.grey),
-                child: Image.network(responListBook4!["image"]),
-              ))
+                child: Container(
+                  margin: const EdgeInsets.all(5),
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      color: Colors.grey),
+                  child: Image.network(responListBook4!["image"]),
+                ),
+              )
             ],
           ),
         )

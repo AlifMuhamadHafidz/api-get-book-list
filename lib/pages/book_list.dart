@@ -15,7 +15,7 @@ class BookList extends StatefulWidget {
 class _BookListState extends State<BookList> {
   Map<String, dynamic>? responListBook;
   getDataSatuBuku() async {
-    var url = Uri.parse('https://api.itbook.store/1.0/books/9781484206485');
+    var url = Uri.parse('https://api.itbook.store/1.0/books/9781491954249');
     var response = await http.get(
       url,
     );

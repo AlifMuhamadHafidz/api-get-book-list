@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
                   textStyle: const TextStyle(
                       fontSize: 28, fontWeight: FontWeight.bold)),
               child: const Text(
-                "Lihat Detail Buku",
+                "Books Detail",
                 style: TextStyle(color: Colors.white),
               ),
             ),
